@@ -31,3 +31,27 @@ El Adapter dentro de un RecyclerView se encarga de vincular los datos de una lis
 datos con las vistas que se muestran en pantalla. El Adapter proporciona una manera eficiente de crear y
 reutilizar las vistas que se muestran en pantalla al tiempo que se asegura de que los datos se muestran en el
 orden y cantidad correctos.
+
+
+lab_09
+
+#1 Las coroutines son un mecanismo de programación que permite escribir código asíncrono de manera
+secuencial y estructurada en Kotlin. A diferencia de los hilos tradicionales, las coroutines son concurrencia
+cooperativa, lo que significa que el programador tiene el control para decidir cuándo se suspende y reanuda.
+
+#2 Mientras una coroutine está suspendida, el hilo
+subyacente puede ser utilizado para ejecutar otras tareas, evitando bloqueos innecesarios y maximizando la
+eficiencia de los recursos. La suspensión en las coroutines de Android se refiere a la capacidad de suspender momentáneamente la
+ejecución de una coroutine sin obstruir el main thread. Cuando se suspende una coroutine, el hilo que estaba
+utilizando se libera para que otras coroutines o acciones puedan utilizarlo. Como resultado, es posible desarrollar
+código asíncrono y no bloqueante que pueda manejar actividades largas o bloqueantes sin interferir con el hilo
+principal de la interfaz de usuario o hacer que la aplicación sea inutilizable.
+
+#3 La función de un Dispatcher es especificar en qué hilo (o hilos) se ejecutará una coroutine. el Dispatcher
+Dispatchers.Main ejecuta coroutines en el hilo principal de la aplicación, que es también su hilo UI. Esto se puedeutilizar para actualizar la interfaz de usuario o llevar a cabo otras acciones que requieren la participación de la
+interfaz de usuario. Por otra parte el Dispatchers.IO para operaciones de entrada o salida de datos intensivas y
+Dispatchers.Default para tareas de computación intensiva.
+
+#4 utilizado para lanzar coroutines de manera asíncrona se obtiene el resultado
+utilizando el objeto Deferred. El resultado se obtiene mediante la función await(). Y es útil cuando se
+deben ejecutar tareas concurrentes y combinar los resultados.
